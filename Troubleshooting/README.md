@@ -15,12 +15,14 @@ N | Issue | How to find | Time to find min.|How to fix|Time to fix min.
 **Answers to additional questions:**
 
 **What java version is installed?**
+ 
  Run command "java -version" 
   java version "1.7.0_79" 
   Java(TM) SE Runtime Environment (build 1.7.0_79-b15) 
   Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode) 
   
 **How was it installed and configured?**
+
 It has been installed installed by unzipping rpm
 Java has been configured with "alternatives"
 
