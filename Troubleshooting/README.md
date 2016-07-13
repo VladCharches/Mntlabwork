@@ -12,16 +12,51 @@ N | Issue | How to find | Time to find min.|How to fix|Time to fix min.
 10 | Autostart Tomcat | Checked chkconfig | 1 | Edited level in chkconfig (chkconfig --level (2345) tomcat on) restarted VM. Everything Started. | 5 |
 
 
-Answers on additional questions:
+**Answers to additional questions:**
 
-What java version is installed?
+**What java version is installed?**
  Run command "java -version" 
   java version "1.7.0_79" 
   Java(TM) SE Runtime Environment (build 1.7.0_79-b15) 
   Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode) 
   
-How was it installed and configured?
+**How was it installed and configured?**
 It has been installed installed by unzipping rpm
 Java has been configured with "alternatives"
 
-Where are log files of tomcat and httpd?
+**Where are log files of tomcat and httpd?**
+ 
+ Httpd: /var/log/httpd/  
+ tomcat: /opt/apache/tomcat/7.0.62/logs/
+ 
+**Where is JAVA_HOME and what is it?**
+
+  In general located in user ~/.bash_profile
+  JAVA_HOME is a variable that helps to locate JDK and JRE to other applications.
+  
+**Where is tomcat installed?**
+
+  Tomcat installed in /opt/apache/tomcat/7.0.62/
+
+**What is CATALINA_HOME?**
+
+CATALINA_HOME is tomcat home directory
+
+**What users run httpd and tomcat processes? How is it configured?**
+
+  User apache start httpd this user is configured in httpd.conf   
+  User tomcat start tomcat this user is configured in init.d   
+
+**What configuration files are used to make components work with each other?**
+
+  httpd.conf, vhost.conf, workers.properties, server.xml
+
+**What does it mean: “load average: 1.18, 0.95, 0.83”?**
+
+  For one core processor that means 
+  for 1 min load average= 1.18
+  for 5 min load average= 0.95
+  for 15 min load average= 0.83
+
+
+
